@@ -3,9 +3,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const list = document.querySelector("ul");
   
 
-  list.addEventListener("click", (e) => {
 
-    
+
+  list.addEventListener("click", (e) => {
 
     if (e.target.className === "checked" ) {
     
@@ -15,6 +15,16 @@ document.addEventListener("DOMContentLoaded", () => {
       e.target.classList.add("checked");
     }
 
+    
+      if ( e.target.nodeName === "SPAN" ){
+        e.target.parentNode.remove();
+      };
+    
+    
+    
+
   });
+
+
   
 });
